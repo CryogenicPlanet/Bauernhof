@@ -1,0 +1,12 @@
+{
+    "name": "Bauernhof",
+  "version": "1.0.0",
+  "description": "A project for the nps k hack",
+  "main": "server.js",
+    "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.75.0",
+    "requestify": "^0.2.4"
+  }
+}

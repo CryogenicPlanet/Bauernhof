@@ -1,0 +1,328 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+        
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="../js/materialize.min.js"></script>
+     <div class="row">
+       <nav class="nav-extended cyan accent-4">
+    <div class="nav-wrapper">
+        
+   
+      <a href="../index.html" class="brand-logo center">Bauernhof</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="../Reports/">Home</a></li>
+        <li class="active"><a id="My_Account">My Account</a></li>
+      </ul>
+    </div>
+     <ul class="tabs tabs-transparent">
+        <li class="tab col s6"><a class="active" href="#personal_details">Personal Details</a></li>
+        <li class="tab col s5"><a href="#farm_info">Farm Info</a></li>
+       
+      </ul>
+  </nav>
+  </div>
+
+  <div id="personal_details" class="row">
+    <div class="containter">
+        <div class="col s8 offset-s2">
+          <div class="card teal darken-3">
+            <div class="card-content white-text">
+              <span class="card-title">Personal Details</span>
+             <div class="row">
+                  <p id="info" class="flow-text">Your personal information is listed below if you would like to change it please click on edit and then save.</p>
+    <form id='details' class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input disabled placeholder="Placeholder" id="first_name" type="text" class="validate"  >
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input disabled id="last_name" type="text" class="validate" >
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <!--
+      <div class="row">
+        <div class="input-field col s6">
+          <input disabled id="password" type="password" class="validate" length="25" >
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field col s6">
+          <input disabled id="Conpassword" type="password" class="validate" length="25" >
+          <label for="Conpassword">Confrim Password</label> 
+        </div> 
+      </div> -->
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      </div>
+    </form>
+     </div>
+            <div class="card-action">
+                  <a id="edit" onclick="edtPersonalDetails()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
+                <a id="send" onclick="onSend_Click('0')" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">send</i></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id="farm_info" class="row">
+          <div class="col s8 offset-s2">
+          <div class="card teal darken-3">
+            <div class="card-content white-text">
+              <span class="card-title">Farm Details</span>
+             <div class="row">
+                  <p id="farm_text" class="flow-text">Details about your farm are displayed below</p>
+    <form id='farm_details' class="col s12">
+      <div class="row">
+                  <div class="input-field col s6">
+          <input disabled placeholder="Enter an Approximate Area of your Farm in Hectares" id="farm_size" type="number" class="validate"  >
+          <label for="farm_size">Farm Area(In hectares)</label>
+        </div>
+        <div class="input-field col s6">
+  
+    <select>
+      <option value=""   selected>Choose The Soil Type</option>
+      <option value="1" id="soil1">black</option>
+      <option value="2" id="soil2">alluvial</option>
+      <option value="3" id="soil3">red/yellow</option>
+      <option value="4" id="soil4">arid/desert</option>
+      <option value="5" id="soil5">mountain</option>
+      <option value="6"> laterite</option>
+    </select>
+    <label>Soil Type</label>
+        </div>
+        </div>
+        <div class = "row">
+           <div class="input-field col s6">
+          <input disabled placeholder="RABI" id = "Rcropname" type="number" class="validate"  >
+          <label for="farm_size">Rabi crops</label>
+        </div>
+        <div class="input-field col s6">
+          <input disabled placeholder = "KHARIF" id="Kcropname"  type="text" class="validate" >
+          <label for="soil_type">KHARIF</label>
+        </div>
+        </div>
+      </div>
+      </div>
+        </form>
+            <div class="card-action">
+                  <a id='edit1' onclick="edtFarmDetails()" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">mode_edit</i></a>
+                <a id="send1" onclick="onSend_Click('1')" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">send</i></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+ <footer class="page-footer cyan-accent-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">About Us</h5>
+                <p class="flow-text grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                magna aliquam erat volutpat.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contact Us</h5>
+                 <p class="flow-text grey-text text-lighten-4">You can contact us at:</p>
+                <!-- <ul  class="pagination"> -->
+                <ul>
+                     <li><a target="_blank" href="tel:9999999999"><i class="medium material-icons">phone</i></a></li>
+                    <li><a target="_blank" href="mailto:rahultarak12345@gmail.com"><i class="medium material-icons">email</i></a></li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="footer-copyright">
+            <div class="container">
+             2016 Bauernhof All rights reserved.
+            <a class="grey-text text-lighten-4 right" target="_blank" href="https://github.com/CryogenicPlanet/Bauernhof"><img class="circle responsive-img" width="50" style="float:right" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"></p></a>
+            </div>
+          </div>
+        </footer>
+      <script type="text/javascript"> 
+      
+             document.getElementById("send").style.visibility = "hidden";
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+        $(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+      //Call from database on post request and change values to existing values or defeault values
+      var Uid =2147483647;
+           $.ajax({
+    type: "POST",
+    url: "account.php",
+    data:  {
+        uid : Uid
+    },
+    dataType:'JSON', 
+    success: function(response){
+       document.getElementById("first_name").setAttribute('placeholder',response.first_name);
+         document.getElementById("last_name").setAttribute('placeholder',response.last_name);
+        document.getElementById("email").setAttribute('placeholder',response.email);
+    }
+});
+      if (uid==null){
+            document.getElementById("info").innerHTML ="As you have activated a new account we will be needing you to fill out these details before you procced.";
+        document.getElementById("farm_text").innerHTML ="As you have activated a new account we will be needing you to fill out these details before you procced.";
+          document.getElementById("first_name").setAttribute('placeholder','Please Enter Your Name');
+          document.getElementById("farm_size").setAttribute('placeholder','Enter an Approximate Area of your Farm in Hectares');
+          document.getElementById("soil_type").setAttribute('placeholder','Enter the Soil Type');
+        document.getElementById("last_name").setAttribute('placeholder','Please Enter Your Last Name');
+        document.getElementById("email").setAttribute('placeholder','Please Enter Your Email Address');
+     //   document.getElementById("password").setAttribute('placeholder','Please Enter A Password');
+       //     document.getElementById("Conpassword").setAttribute('placeholder','Please Repeat Your Password');
+       }
+       function display_pslData(){
+       
+       }
+       
+      function onEdit_Click(){
+          edtFarmDetails();
+          edtPersonalDetails();
+      }
+  function onSend_Click(element){
+     // var password = document.forms["details"]["password"].value;
+     // var conpasswrod = document.forms["details"]["Conpassword"].value;
+   /*   if (password!=conpasswrod){
+            Materialize.toast("Password Don't Match",4000,'rounded');// 4000 is the duration of the toast
+            document.getElementById('password').setAttribute('value',"");
+            document.getElementById('Conpassword').setAttribute('value',"");
+            
+
+      } */
+      if (element=='0'){
+      var not_filled =0;
+      var array = new Array(document.forms["details"]["first_name"].value,document.forms["details"]["last_name"].value,document.forms["details"]["email"].value);
+     for(var i =0; i < 3; i++){
+          
+          if(array[i] == ""){
+              not_filled =1;
+          }
+          i++;
+      }
+      if(not_filled != 0){
+           var $toastContent = $(' <div class="card-panel"> <span class="blue-text text-darken-2">' + "Some Required Fields Havent Been Filled Please Fill them</span> </div>");
+        Materialize.toast($toastContent,4000);// 4000 is the duration of the toast
+      }else {
+        var status = add_to_db(array,"personal_details");
+        var $toastContent = $('<div class="card-panel"> <span class="blue-text text-darken-2">' + status +" </span> </div>");
+        Materialize.toast($toastContent,4000);
+          if (status == 200){
+          var $toastContent = $('<div class="card-panel"> <span class="blue-text text-darken-2">' + "Your Details Have Been Updated</span> </div>");
+        Materialize.toast($toastContent,4000);
+          }else{
+              var $toastContent = $(' <div class="card-panel"> <span class="blue-text text-darken-2">' + "There was an Error Updating Your Details </span> </div>");
+        Materialize.toast($toastContent,4000);
+          }
+      }
+     
+      
+  }
+  }
+  function edtPersonalDetails(){
+       document.getElementById("first_name").disabled = false;
+          document.getElementById("last_name").disabled = false;
+          document.getElementById("email").disabled = false;
+                    document.getElementById("send").style.visibility = "visible";
+                    document.getElementById("edit").style.visibility = "hidden";
+  }
+  function edtFarmDetails() {
+       document.getElementById("farm_size").disabled = false;
+       document.getElementById("Rcropname").disabled = false;
+       document.getElementById("Kcropname").disabled = false;
+       selectInt();
+                document.getElementById("send1").style.visibility = "visible";
+            document.getElementById("edit1").style.visibility = "hidden";
+           
+
+  }
+  // Get the modal
+var modal = document.getElementById('new_arduino_modal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script>
+ var returnStatus = 0;
+function selectInt(){
+   $(document).ready(function() {
+    $('select').material_select();
+  });
+}
+ function add_to_db(params,form){
+   var x = 200;
+   if (form =="personal_details"){
+     $.ajax({
+    type: "POST",
+    url: "account.php",
+    data:  {
+       form : form,
+       fname : params[0],
+       lname : params[1],
+       email: params[2]
+    },
+    dataType:'JSON', 
+    success: function(response){
+     if(response.status = 200){
+       sleepFor(2000);
+     }
+    }
+});
+   
+        return returnStatus;
+      }
+function setRT(){
+  returnStatus = 200;
+}
+function sleepFor(sleepDuration){
+    var now = new Date().getTime();
+    while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
+    if(sleepDuration = 2000){
+         setRT();
+    }
+  
+}
+</script>
+    </body>
+  </html>
+        
